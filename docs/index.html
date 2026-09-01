@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sher</title>
+    <link rel="stylesheet" href="style.css?v=9">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Main Playground Screen -->
+    <div class="app">
+        <header class="header">
+            <div class="logo">Sher</div>
+            <div class="header-actions">
+                <button id="btn-learn" class="btn-action">Learn</button>
+                <button id="btn-run" class="btn-action">Run</button>
+            </div>
+        </header>
+
+        <div class="editor-container">
+            <div class="line-numbers" id="line-numbers"></div>
+            <div class="editor-area">
+                <pre class="highlight-layer" id="highlight-layer" aria-hidden="true"><code id="highlight-code"></code></pre>
+                <textarea id="code-input" spellcheck="false" autocomplete="off" autocapitalize="off"></textarea>
+            </div>
+        </div>
+
+        <div class="terminal-container">
+            <div class="terminal-body" id="terminal"></div>
+        </div>
+    </div>
+
+    <!-- Holy Sher: Full-Page Book View -->
+    <div id="holy-sher-view" class="book-view hidden">
+        <header class="book-header">
+            <div class="book-header-left">
+                <button id="btn-close-book" class="btn-action">Powrót</button>
+                <span class="book-title">Holy Sher</span>
+            </div>
+            <div class="book-header-right">
+                <div class="lang-selector">
+                    <button id="btn-lang-pl" class="btn-lang active">PL</button>
+                    <button id="btn-lang-en" class="btn-lang">EN</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="book-layout">
+            <aside class="book-sidebar">
+                <nav id="chapters-nav" class="chapters-list"></nav>
+            </aside>
+            <main class="book-main" id="chapter-main">
+                <!-- Dynamically populated chapter content -->
+            </main>
+        </div>
+    </div>
+
+    <script src="sher-engine.js?v=9"></script>
+    <script src="app.js?v=9"></script>
+</body>
+</html>
